@@ -4,6 +4,7 @@ from train import train_step
 from inference import generate_audio
 import soundfile as sf
 import numpy as np
+import tensorflow as tf
 
 wavenet_model = WaveNet(
     num_blocks=2, # Number of block cycles
@@ -83,14 +84,14 @@ generated_encoded_audio = generate_audio(
     seed_audio_segment,
     num_samples_to_generate,
     sequence_length=100, # Use a sequence_length for context, consistent with training setup
-    quantization_channels=output_dim
+    quantization_channels=quantization_channels
 )
 
 print(f"\nGenerated encoded audio shape: {generated_encoded_audio.shape}")
 print(f"Generated encoded audio min/max: {np.min(generated_encoded_audio)} / {np.max(generated_encoded_audio)}")
 
 # Decode the generated mu-law audio
-decoded_generated_audio = mu_law_decode(generated_encoded_audio, output_dim)
+decoded_generated_audio = mu_law_decode(generated_encoded_audio, quantization_channels)
 
 print(f"Decoded generated audio shape: {decoded_generated_audio.shape}")
 print(f"Decoded generated audio min/max: {np.min(decoded_generated_audio):.4f} / {np.max(decoded_generated_audio):.4f}")

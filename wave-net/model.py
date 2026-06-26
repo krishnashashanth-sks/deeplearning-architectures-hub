@@ -1,4 +1,6 @@
 from layers import *
+from tensorflow import keras
+from tensorflow import layers
 
 class WaveNet(keras.Model):
   def __init__(self,num_blocks,num_layers_per_block,filters,kernel_size,residual_filters,skip_filters,output_dim,**kwargs):

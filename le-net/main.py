@@ -1,4 +1,7 @@
-from dataset import x_train,y_train
+import numpy as np
+import matplotlib.pyplot as plt
+from dataset import x_train,y_train,x_test,y_test
+from model import build_lenet5_model
 
 # Define input shape (e.g., for MNIST 28x28 images, you might want to pad to 32x32)
 input_shape = (32, 32, 1) # Assuming grayscale images padded to 32x32
@@ -30,8 +33,6 @@ loss, accuracy = lenet_model.evaluate(x_test, y_test, verbose=0)
 print(f"Test Loss: {loss:.4f}")
 print(f"Test Accuracy: {accuracy:.4f}")
 
-import numpy as np
-import matplotlib.pyplot as plt
 
 print("\n--- Performing Model Inference ---")
 

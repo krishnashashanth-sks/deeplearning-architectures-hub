@@ -39,4 +39,3 @@ def build_lenet5_model(input_shape=(32, 32, 1), num_classes=10):
     ])
 
     return model
-main

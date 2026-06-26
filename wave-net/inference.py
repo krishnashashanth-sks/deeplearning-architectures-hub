@@ -1,4 +1,5 @@
 import numpy as np
+import tensorflow as tf
 
 def generate_audio(model, seed_audio, num_samples_to_generate, sequence_length, quantization_channels):
     generated_audio = list(seed_audio.flatten().astype(np.int32)) # Start with seed as list of integers

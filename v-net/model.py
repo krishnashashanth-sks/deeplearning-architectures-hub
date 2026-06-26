@@ -1,5 +1,6 @@
 from tensorflow.keras.layers import Input, Conv3D, Conv3DTranspose, PReLU, BatchNormalization, Add, Concatenate
-from layers import conv_bLock_3d
+from tensorflow.keras import Model
+from layers import conv_block_3d
 
 def build_vnet(input_shape,num_classes,base_n_filters=16):
   inputs=Input(shape=input_shape)
