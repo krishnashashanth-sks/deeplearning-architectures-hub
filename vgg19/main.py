@@ -2,6 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from utils import preprocess_image
 from model import build_model
+import tensorflow as tf
+from tensorflow.keras.utils import to_categorical
+
 
 # --- 1. Load and Preprocess MNIST Dataset ---
 print("Loading and preprocessing MNIST dataset...")
