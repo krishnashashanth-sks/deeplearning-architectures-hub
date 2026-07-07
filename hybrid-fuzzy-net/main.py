@@ -1,5 +1,13 @@
 from algorithm import km_algorithm
-from layers import  
+from layers import  create_cnn_feature_extractor
+from layers import FuzzificationLayer
+from utils import create_type2_trapezoidal_mf_params,trapezoidal_mf
+import numpy as np
+from visualize import plot_type2_mf
+import matplotlib.pyplot as plt
+from tensorflow.keras import layers
+from tenosrflow import keras
+
 # --- Configuration Parameters ---
 input_shape = (28, 28, 1) # Example for image input (e.g., MNIST)
 num_extracted_features = 128 # Output features from CNN

@@ -1,5 +1,6 @@
 from tensorflow.keras import layers
 from tensorflow import keras
+import tensorflow as tf
 
 # ---  Custom Keras Layer for Type-1 Fuzzification (Example) ---
 class FuzzificationLayer(layers.Layer):
