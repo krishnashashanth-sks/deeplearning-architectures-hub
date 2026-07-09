@@ -24,7 +24,7 @@ if __name__ == '__main__':
         'latent_height': vae_pixel_height // 8, # Assuming 3 downsamples in VAE encoder
         'latent_width': vae_pixel_width // 8, # Assuming 3 downsamples in VAE encoder
         'motion_embedding_dim': 256,
-        'appearance_embedding_dim': 256,
+        'appearance_embedding_dim': 128,
         'unet_model_channels': 32,
         'unet_num_heads': 8,
         'unet_num_res_blocks': 1,
